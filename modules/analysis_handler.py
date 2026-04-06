@@ -96,7 +96,7 @@ IMPORTANTE: A análise deve ser diferente para cada empresa, não genérica!
         # Chamar Claude
         response = client.messages.create(
             model="claude-opus-4-6",
-            max_tokens=1000,
+            max_tokens=800,
             messages=[
                 {
                     "role": "user",
