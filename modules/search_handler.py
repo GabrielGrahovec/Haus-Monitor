@@ -80,7 +80,7 @@ IMPORTANTE:
         # Primeira busca - AGRESSIVA
         response = client.messages.create(
             model="claude-opus-4-6",
-            max_tokens=800,
+            max_tokens=300,
             tools=[
                 {
                     "type": "web_search_20260209",
@@ -133,7 +133,7 @@ Retorne em JSON com mesma estrutura anterior.
             
             response2 = client.messages.create(
                 model="claude-opus-4-6",
-                max_tokens=800,
+                max_tokens=300,
                 tools=[
                     {
                         "type": "web_search_20260209",
