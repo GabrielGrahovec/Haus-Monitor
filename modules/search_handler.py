@@ -79,7 +79,7 @@ IMPORTANTE:
         
         # Primeira busca - AGRESSIVA
         response = client.messages.create(
-            model="claude-haiku-4-5",
+            model="claude-sonnet-4-20250514",
             max_tokens=300,
             tools=[
                 {
@@ -132,7 +132,7 @@ Retorne em JSON com mesma estrutura anterior.
 """
             
             response2 = client.messages.create(
-                model="claude-haiku-4-5",
+                model="claude-sonnet-4-20250514",
                 max_tokens=300,
                 tools=[
                     {
