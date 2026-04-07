@@ -29,7 +29,7 @@ def buscar_noticias(nome_emissor: str) -> List[Dict]:
         prompt = f"""
 BUSCA URGENTE DE NOTÍCIAS CRÍTICAS SOBRE: {nome_emissor}
 
-Você é um pesquisador financeiro. Procure TODAS as notícias sobre {nome_emissor} nos últimos 24 meses.
+Você é um pesquisador financeiro. Procure TODAS as notícias sobre {nome_emissor} nos últimos 36 meses.
 
 PROCURE ESPECIALMENTE POR:
 1. Recuperação judicial / extrajudicial de {nome_emissor}
@@ -46,8 +46,8 @@ PROCURE ESPECIALMENTE POR:
 TERMOS DE BUSCA QUE DEVEM SER USADOS:
 - "{nome_emissor} recuperação judicial"
 - "{nome_emissor} extrajudicial"
-- "{nome_emissor} RJ 2024"
-- "{nome_emissor} RJ 2025"
+- "{nome_emissor} recuperação judicial 2026"
+- "{nome_emissor} extrajudicial 2026"
 - "{nome_emissor} default"
 - "{nome_emissor} dívida"
 - "{nome_emissor} falência"
@@ -79,7 +79,7 @@ IMPORTANTE:
         
         # Primeira busca - AGRESSIVA
         response = client.messages.create(
-            model="claude-opus-4-6",
+            model="claude-haiku-4-5",
             max_tokens=300,
             tools=[
                 {
@@ -132,7 +132,7 @@ Retorne em JSON com mesma estrutura anterior.
 """
             
             response2 = client.messages.create(
-                model="claude-opus-4-6",
+                model="claude-haiku-4-5",
                 max_tokens=300,
                 tools=[
                     {
